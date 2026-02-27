@@ -1,0 +1,263 @@
+/* ==========================================================================
+   pages/business.css — Business Problem Tab Specific Styles
+   SuperStorys Analytics Dashboard
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   HERO BANNER
+   -------------------------------------------------------------------------- */
+.business-hero {
+    background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 60%, #0F2942 100%);
+    border-radius: var(--radius-xl);
+    padding: 2.75rem;
+    margin-bottom: 1.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.business-hero::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.28), transparent 70%);
+    border-radius: 50%;
+}
+
+.bh-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    color: var(--brand-primary-light);
+    margin-bottom: 1.1rem;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.bh-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.5;
+    margin-bottom: 1.1rem;
+    max-width: 900px;
+}
+
+.bh-body {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+/* --------------------------------------------------------------------------
+   3-COLUMN CHALLENGE / APPROACH / SOLUTION CARDS
+   -------------------------------------------------------------------------- */
+.biz-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.75rem;
+}
+
+.biz-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-color);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.biz-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.biz-card-icon {
+    font-size: 1.85rem;
+    margin-bottom: 0.85rem;
+}
+
+.biz-card h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.1rem;
+    letter-spacing: -0.01em;
+}
+
+.biz-card li {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    padding: 7px 0 7px 18px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.biz-card li:last-child {
+    border-bottom: none;
+}
+
+.biz-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.biz-card--challenge li::before {
+    background: var(--accent-rose);
+}
+
+.biz-card--approach li::before {
+    background: var(--accent-amber);
+}
+
+.biz-card--solution li::before {
+    background: var(--accent-emerald);
+}
+
+.biz-card--challenge {
+    border-top: 3px solid var(--accent-rose);
+}
+
+.biz-card--approach {
+    border-top: 3px solid var(--accent-amber);
+}
+
+.biz-card--solution {
+    border-top: 3px solid var(--accent-emerald);
+}
+
+/* --------------------------------------------------------------------------
+   IMPACT METRICS ROW
+   -------------------------------------------------------------------------- */
+.impact-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.1rem;
+    margin-bottom: 1.75rem;
+}
+
+.impact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 1.75rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.impact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.impact-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.impact-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 7px;
+}
+
+.impact-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   ROADMAP TIMELINE
+   -------------------------------------------------------------------------- */
+.timeline {
+    padding: 1.75rem;
+}
+
+.tl-item {
+    display: flex;
+    gap: 1.1rem;
+    position: relative;
+    padding-bottom: 1.75rem;
+}
+
+.tl-item:last-child {
+    padding-bottom: 0;
+}
+
+.tl-item::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 22px;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-color);
+}
+
+.tl-item:last-child::before {
+    display: none;
+}
+
+.tl-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--border-color);
+    border: 3px solid var(--bg-card);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    margin-top: 2px;
+}
+
+.tl-done .tl-dot {
+    background: var(--accent-emerald);
+}
+
+.tl-active .tl-dot {
+    background: var(--brand-primary);
+    box-shadow: 0 0 0 5px rgba(99, 102, 241, 0.2);
+}
+
+.tl-content {
+    flex: 1;
+}
+
+.tl-phase {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.tl-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}

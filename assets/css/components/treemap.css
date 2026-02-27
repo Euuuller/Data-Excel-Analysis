@@ -1,0 +1,10 @@
+/* ==========================================================================
+   components/treemap.css — RFM D3 Treemap Container
+   SuperStorys Analytics Dashboard
+   ========================================================================== */
+
+.treemap-container {
+    padding: 1.5rem 1.75rem;
+    min-height: 380px;
+    position: relative;
+}

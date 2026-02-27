@@ -1,0 +1,92 @@
+/* ==========================================================================
+   components/kpi-cards.css — KPI Metric Cards
+   SuperStorys Analytics Dashboard
+   ========================================================================== */
+
+.kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.1rem;
+    margin-bottom: 1.75rem;
+}
+
+.kpi-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-color);
+    padding: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.kpi-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.kpi-icon-wrap {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-md);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.kpi-icon-wrap svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Colour variants */
+.kpi-blue .kpi-icon-wrap {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--accent-indigo);
+}
+
+.kpi-teal .kpi-icon-wrap {
+    background: rgba(20, 184, 166, 0.1);
+    color: var(--accent-teal);
+}
+
+.kpi-rose .kpi-icon-wrap {
+    background: rgba(244, 63, 94, 0.1);
+    color: var(--accent-rose);
+}
+
+.kpi-amber .kpi-icon-wrap {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--accent-amber);
+}
+
+.kpi-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.kpi-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.kpi-delta {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.kpi-delta.positive {
+    color: var(--accent-emerald);
+}
+
+.kpi-delta.negative {
+    color: var(--accent-rose);
+}

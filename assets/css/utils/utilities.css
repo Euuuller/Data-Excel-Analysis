@@ -1,0 +1,19 @@
+/* ==========================================================================
+   utils/utilities.css — Global Utilities & Overlay
+   SuperStorys Analytics Dashboard
+   ========================================================================== */
+
+/* Hidden state */
+.hidden {
+    display: none !important;
+}
+
+/* Sidebar overlay (mobile) */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+    backdrop-filter: blur(2px);
+}

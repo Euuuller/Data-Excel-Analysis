@@ -1,0 +1,26 @@
+/* ==========================================================================
+   components/chart-wrap.css — Chart Wrappers & Grid Layouts
+   SuperStorys Analytics Dashboard
+   ========================================================================== */
+
+.chart-wrap {
+    padding: 1.5rem 1.75rem;
+    position: relative;
+    min-height: 260px;
+}
+
+.chart-wrap--tall {
+    min-height: 340px;
+}
+
+.chart-wrap canvas {
+    max-height: 340px;
+}
+
+/* 2-column chart grid */
+.charts-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}

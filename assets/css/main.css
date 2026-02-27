@@ -1,0 +1,31 @@
+/* ==========================================================================
+   main.css — CSS Entry Point
+   SuperStorys Analytics Dashboard
+   Import order: base → layout → components → pages → utils
+   ========================================================================== */
+
+/* Base layer: design tokens and reset */
+@import url('base/variables.css');
+@import url('base/reset.css');
+
+/* Layout layer: structural regions */
+@import url('layout/app.css');
+@import url('layout/sidebar.css');
+@import url('layout/topbar.css');
+
+/* Component layer: reusable UI blocks */
+@import url('components/section-card.css');
+@import url('components/kpi-cards.css');
+@import url('components/chart-wrap.css');
+@import url('components/heatmap.css');
+@import url('components/treemap.css');
+@import url('components/us-map.css');
+@import url('components/tooltips.css');
+
+/* Page layer: tab-specific styles */
+@import url('pages/cover.css');
+@import url('pages/business.css');
+
+/* Utilities: responsive breakpoints and helpers */
+@import url('utils/utilities.css');
+@import url('utils/responsive.css');

@@ -1,0 +1,70 @@
+/* ==========================================================================
+   components/heatmap.css — Cohort Retention Heatmap Table
+   SuperStorys Analytics Dashboard
+   ========================================================================== */
+
+.heatmap-wrapper {
+    padding: 1.5rem 1.75rem;
+    overflow-x: auto;
+}
+
+.heatmap-table {
+    border-collapse: separate;
+    border-spacing: 4px;
+    min-width: 700px;
+    width: 100%;
+}
+
+.heatmap-table th {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 6px 4px;
+    text-align: center;
+    white-space: nowrap;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.heatmap-table th:first-child,
+.heatmap-table th:nth-child(2) {
+    text-align: left;
+}
+
+.heatmap-table td {
+    text-align: center;
+    font-size: 13px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    padding: 9px 6px;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: transform 0.15s;
+}
+
+.heatmap-table td:first-child {
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding-left: 0;
+}
+
+.heatmap-table td:nth-child(2) {
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.heatmap-table td.hm-cell {
+    cursor: default;
+    position: relative;
+}
+
+.heatmap-table td.hm-cell:hover {
+    transform: scale(1.1);
+    z-index: 5;
+}

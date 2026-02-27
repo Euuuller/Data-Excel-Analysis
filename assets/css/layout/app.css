@@ -1,0 +1,117 @@
+/* ==========================================================================
+   layout/app.css — App Shell, Tab System & Page Headers
+   SuperStorys Analytics Dashboard
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   APP SHELL
+   -------------------------------------------------------------------------- */
+.app {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app.hidden {
+    display: none;
+}
+
+/* --------------------------------------------------------------------------
+   TAB SYSTEM
+   -------------------------------------------------------------------------- */
+.tab-content {
+    display: none;
+    padding: 2.25rem 2.5rem;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   PAGE HEADER
+   -------------------------------------------------------------------------- */
+.page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid transparent;
+    background-image:
+        linear-gradient(var(--bg-base), var(--bg-base)),
+        linear-gradient(90deg, var(--brand-primary), var(--accent-teal), transparent);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-image: linear-gradient(90deg, var(--brand-primary) 0%, var(--accent-teal) 40%, transparent 80%) 1;
+}
+
+.page-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.page-title-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--brand-primary), var(--accent-indigo));
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 2px 12px;
+    border-radius: 50px;
+    vertical-align: middle;
+    font-family: 'Inter', sans-serif;
+}
+
+.page-subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.page-date {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 7px 14px;
+    border-radius: 50px;
+    white-space: nowrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   INTRO TEXT
+   -------------------------------------------------------------------------- */
+.intro-text {
+    font-size: 15.5px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1.75rem;
+    max-width: 860px;
+    border-left: 3px solid var(--brand-primary);
+    padding: 1rem 1.25rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    background: rgba(99, 102, 241, 0.04);
+}
+
+/* --------------------------------------------------------------------------
+   MAIN CONTENT AREA
+   -------------------------------------------------------------------------- */
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    background: var(--bg-base);
+    transition: margin-left var(--transition-sidebar);
+    min-width: 0;
+}

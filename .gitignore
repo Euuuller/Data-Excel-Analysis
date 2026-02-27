@@ -1,0 +1,105 @@
+# ============================================================
+#  .gitignore — SuperStorys Analytics Dashboard
+# ============================================================
+
+# ──────────────────────────────────────────────
+# Operating System Files
+# ──────────────────────────────────────────────
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ──────────────────────────────────────────────
+# Editor & IDE
+# ──────────────────────────────────────────────
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# JetBrains (WebStorm, IntelliJ…)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ──────────────────────────────────────────────
+# Node / npm (local dev tooling only)
+# ──────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm
+.pnpm-debug.log*
+
+# ──────────────────────────────────────────────
+# Build Outputs (if build tools are ever added)
+# ──────────────────────────────────────────────
+dist/
+build/
+out/
+.cache/
+
+# ──────────────────────────────────────────────
+# Environment & Secrets
+# ──────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.env
+
+# ──────────────────────────────────────────────
+# Logs
+# ──────────────────────────────────────────────
+*.log
+logs/
+npm-debug.log
+
+# ──────────────────────────────────────────────
+# Temporary & Miscellaneous
+# ──────────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# Windows reserved device name created by accident
+nul
+
+# ──────────────────────────────────────────────
+# AI / Agent Tooling
+# ──────────────────────────────────────────────
+.gemini/
+.agents/
+.agent/
+_agents/
+_agent/

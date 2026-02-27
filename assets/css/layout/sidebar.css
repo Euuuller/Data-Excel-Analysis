@@ -1,0 +1,257 @@
+/* ==========================================================================
+   layout/sidebar.css — Sidebar Navigation
+   SuperStorys Analytics Dashboard
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   SIDEBAR SHELL
+   -------------------------------------------------------------------------- */
+.sidebar {
+    width: var(--sidebar-w);
+    height: 100vh;
+    background: var(--bg-sidebar);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    transition: width var(--transition-sidebar);
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+/* --------------------------------------------------------------------------
+   HEADER
+   -------------------------------------------------------------------------- */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    flex-shrink: 0;
+}
+
+.sidebar-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--brand-primary), var(--accent-indigo));
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    flex-shrink: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.logo-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    transition: opacity var(--transition-sidebar), max-width var(--transition-sidebar);
+    max-width: 160px;
+    overflow: hidden;
+}
+
+.sidebar-close {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-on-dark-muted);
+    cursor: pointer;
+    font-size: 17px;
+    padding: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   NAV
+   -------------------------------------------------------------------------- */
+.sidebar-nav {
+    padding: 1.25rem 0.75rem;
+    flex: 1;
+}
+
+.nav-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    color: var(--text-on-dark-muted);
+    padding: 0 0.5rem;
+    margin-bottom: 0.6rem;
+    margin-top: 0.4rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    max-height: 40px;
+    overflow: hidden;
+    transition: opacity var(--transition-sidebar), max-height var(--transition-sidebar),
+        padding var(--transition-sidebar), margin var(--transition-sidebar);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    color: var(--text-on-dark-muted);
+    font-size: 14.5px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    transition: background var(--transition), color var(--transition),
+        padding var(--transition-sidebar), gap var(--transition-sidebar);
+}
+
+.nav-item:hover {
+    background: var(--bg-sidebar-hover);
+    color: var(--text-on-dark);
+}
+
+.nav-item.active {
+    background: var(--bg-sidebar-active);
+    color: var(--brand-primary-light);
+    font-weight: 600;
+}
+
+/* Active left-border indicator */
+.nav-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: var(--brand-primary-light);
+    border-radius: 0 3px 3px 0;
+    transition: height var(--transition-sidebar);
+}
+
+.nav-item span {
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 200px;
+    transition: opacity var(--transition-sidebar), max-width var(--transition-sidebar);
+}
+
+.nav-icon {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    transition: transform var(--transition);
+}
+
+.nav-item:hover .nav-icon {
+    transform: scale(1.1);
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER
+   -------------------------------------------------------------------------- */
+.sidebar-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 1.25rem;
+    flex-shrink: 0;
+    transition: padding var(--transition-sidebar);
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    transition: gap var(--transition-sidebar), margin var(--transition-sidebar);
+}
+
+.profile-avatar {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--brand-primary), var(--accent-teal));
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: transform var(--transition);
+    cursor: default;
+}
+
+.profile-avatar:hover {
+    transform: scale(1.08);
+}
+
+.profile-info {
+    overflow: hidden;
+    max-width: 160px;
+    transition: opacity var(--transition-sidebar), max-width var(--transition-sidebar);
+}
+
+.profile-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-on-dark);
+    white-space: nowrap;
+}
+
+.profile-role {
+    font-size: 12px;
+    color: var(--text-on-dark-muted);
+    margin-top: 1px;
+    white-space: nowrap;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-link {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    color: var(--text-on-dark-muted);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.social-link svg {
+    width: 17px;
+    height: 17px;
+}
+
+.social-link:hover {
+    color: var(--brand-primary-light);
+    background: rgba(99, 102, 241, 0.15);
+}

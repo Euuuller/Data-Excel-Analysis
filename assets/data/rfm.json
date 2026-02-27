@@ -1,0 +1,77 @@
+{
+    "segments": [
+        {
+            "name": "Champions",
+            "value": 1850,
+            "color": "#4338CA"
+        },
+        {
+            "name": "Potential Loyalist",
+            "value": 1200,
+            "color": "#6366F1"
+        },
+        {
+            "name": "Loyal Customers",
+            "value": 950,
+            "color": "#818CF8"
+        },
+        {
+            "name": "Recent Customers",
+            "value": 780,
+            "color": "#A5B4FC"
+        },
+        {
+            "name": "Promising",
+            "value": 640,
+            "color": "#0D9488"
+        },
+        {
+            "name": "Customers Needing Attn.",
+            "value": 520,
+            "color": "#14B8A6"
+        },
+        {
+            "name": "At Risk",
+            "value": 410,
+            "color": "#2DD4BF"
+        },
+        {
+            "name": "Hibernating",
+            "value": 310,
+            "color": "#34D399"
+        },
+        {
+            "name": "Cant Lose Them",
+            "value": 270,
+            "color": "#10B981"
+        },
+        {
+            "name": "Lost",
+            "value": 190,
+            "color": "#F59E0B"
+        }
+    ],
+    "revenueBySegment": {
+        "labels": [
+            "Champions",
+            "Loyal",
+            "Potential",
+            "At Risk",
+            "Lost"
+        ],
+        "data": [
+            61200,
+            38400,
+            28000,
+            12500,
+            5100
+        ],
+        "colors": [
+            "#13145fff",
+            "#818CF8",
+            "#94A3B8",
+            "#CBD5E1",
+            "#E2E8F0"
+        ]
+    }
+}

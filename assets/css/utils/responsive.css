@@ -1,0 +1,154 @@
+/* ==========================================================================
+   utils/responsive.css — Media Queries (Tablet & Mobile)
+   SuperStorys Analytics Dashboard
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tablet (≤ 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .kpi-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .biz-grid-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .impact-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile (≤ 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* Cover — hide desktop content, show mobile note */
+    .cover-content {
+        display: none;
+    }
+
+    .cover-mobile-note {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2.5rem 2rem;
+        color: #fff;
+        position: relative;
+        z-index: 2;
+    }
+
+    .cmn-icon {
+        font-size: 3rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .cover-mobile-note h2 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 1.75rem;
+        font-weight: 800;
+        margin-bottom: 0.75rem;
+    }
+
+    .cover-mobile-note p {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 0.5rem;
+        max-width: 320px;
+    }
+
+    .cmn-hint {
+        background: rgba(99, 102, 241, 0.2);
+        border: 1px solid rgba(99, 102, 241, 0.35);
+        border-radius: var(--radius-sm);
+        padding: 0.75rem 1rem;
+        color: var(--brand-primary-light) !important;
+        margin-top: 1rem !important;
+    }
+
+    /* App — hide on mobile, keep cover */
+    .app {
+        display: none !important;
+    }
+
+    .cover {
+        display: flex !important;
+    }
+
+    .cover-bg-shapes {
+        display: block;
+    }
+
+    /* Sidebar — off-canvas on mobile */
+    .sidebar {
+        position: fixed;
+        transform: translateX(-100%);
+        top: 0;
+        bottom: 0;
+        z-index: 200;
+        transition: transform var(--transition);
+        width: var(--sidebar-w) !important;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-close {
+        display: block;
+    }
+
+    .sidebar-overlay {
+        display: block;
+    }
+
+    .sidebar-overlay.hidden {
+        display: none !important;
+    }
+
+    .sidebar-toggle {
+        display: none;
+    }
+
+    /* Topbar */
+    .topbar {
+        display: flex;
+    }
+
+    /* Content */
+    .tab-content {
+        padding: 1.25rem 1rem;
+    }
+
+    /* Grids */
+    .charts-2col {
+        grid-template-columns: 1fr;
+    }
+
+    .kpi-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .biz-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Cover stats */
+    .cover-stats {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .cover-divider {
+        display: none;
+    }
+}
